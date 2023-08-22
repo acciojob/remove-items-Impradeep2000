@@ -1,10 +1,11 @@
-var button = document.getElementById("removeButton");
+//your JS code here. If required.
+let a = document.getElementById("colorSelect");
+let b = document.getElementsByTagName("input");
 
-button.addEventListener("click", function () {
-    var select = document.getElementsById("colorSelect");
-    var selectedOption = select.querySelector("option:checked");
+b.addEventListener("click" , () => {
+	let deleteOp = select.options[select.selectedIndex];
 
-    if (selectedOption) {
-        select.removeChild(selectedOption);
-    }
+	if(deleteOp){
+		deleteOp.remove();
+	}
 });
